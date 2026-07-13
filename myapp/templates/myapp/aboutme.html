@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обо мне</title>
+</head>
+<body>
+<h1>Имя: {{ name }}</h1>
+<h1>Возраст: {{ age }}</h1>
+<h1>Увлечения:</h1>
+{% if not hobbies %}
+    <h2>Нету</h2>
+{% else %}
+    <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<h1>Любимая цитата: {{ fav_quote }}</h1>
+<h1>Родной город: {{ hometown }}</h1>
+</body>
+</html>
